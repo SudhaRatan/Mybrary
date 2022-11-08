@@ -7,15 +7,15 @@ const app = express()
 const expressLayouts = require('express-ejs-layouts')
 const indexRouter = require('./routes/index')
 
-const mongoose = require('mongoose')
-mongoose.connect(process.env.DATABASE_URL,{
-    useNewUrlParser:true,
-    // family:4,
-})
-const db = mongoose.connection
+// const mongoose = require('mongoose')
+// mongoose.connect(process.env.DATABASE_URL,{
+//     useNewUrlParser:true,
+//     // family:4,
+// })
+// const db = mongoose.connection
 
-db.on('error',error => console.error(error))
-db.once('open', () => console.log("Connected to mongoose"))
+// db.on('error',error => console.error(error))
+// db.once('open', () => console.log("Connected to mongoose"))
 
 app.set('view engine','ejs')
 app.set('views',__dirname+'/views')
