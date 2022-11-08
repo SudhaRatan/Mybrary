@@ -1,5 +1,5 @@
 if(process.env.NODE_ENV !== 'production'){
-    require('dotenv').parse()
+    require('dotenv').config()
 }
 
 const express = require('express')
@@ -10,7 +10,7 @@ const indexRouter = require('./routes/index')
 const mongoose = require('mongoose')
 mongoose.connect(process.env.DATABASE_URL,{
     useNewUrlParser:true,
-    family:4,
+    // family:4,
 })
 const db = mongoose.connection
 
